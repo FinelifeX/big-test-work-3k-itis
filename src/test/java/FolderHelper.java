@@ -13,13 +13,11 @@ public class FolderHelper extends HelperBase {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='I’d like to share an existing folder'])[1]/following::button[1]")).click();
         driver.findElement(By.id("unified-share-modal-title")).clear();
         driver.findElement(By.id("unified-share-modal-title")).sendKeys(folderData.getName());
-        Thread.sleep(3000);
+        Thread.sleep(10000);
         driver.findElement(By.id("unified-share-modal-contacts-tokenizer")).click();
         driver.findElement(By.id("unified-share-modal-contacts-tokenizer")).clear();
         driver.findElement(By.id("unified-share-modal-contacts-tokenizer")).sendKeys("bulik.mu@yandex.ru");
         driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div/div/div/div[4]/div/div[2]/button")).click();
-//        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Can view'])[1]/following::div[1]")).click();
-//        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Can view'])[1]/following::button[1]")).click();
         return this.folderData;
     }
 

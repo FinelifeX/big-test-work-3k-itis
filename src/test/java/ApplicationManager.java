@@ -1,5 +1,5 @@
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.fail;
 
@@ -16,8 +16,8 @@ public class ApplicationManager {
 
     private static ThreadLocal<ApplicationManager> app = new ThreadLocal<>();
 
-    public ApplicationManager() {
-        this.driver = new FirefoxDriver();
+    ApplicationManager() {
+        this.driver = new ChromeDriver();
         driver.manage().window().maximize();
         this.baseUrl = "http://dropbox.com";
         this.verificationErrors = new StringBuffer();

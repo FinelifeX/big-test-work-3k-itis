@@ -6,7 +6,7 @@ public class AuthTest extends TestBase {
     public void testAuth() throws Exception {
         AuthHelper authHelper = manager.getAuthHelper();
         manager.getNavigationHelper().openLoginPage();
-        UserLoginData userLoginData =  authHelper.createNewUser("yourmusta@yandex.ru", "123456qwerty");
+        UserLoginData userLoginData =  authHelper.createNewUser();
         authHelper.auth(userLoginData);
     }
 
